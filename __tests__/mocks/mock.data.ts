@@ -123,9 +123,52 @@ export const mockPokemonList = {
   ],
 };
 
+export const mockIvysaur = {
+  id: 2,
+  name: "ivysaur",
+  sprites: {
+    front_default:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+  },
+  types: [
+    {
+      slot: 1,
+      type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
+    },
+    {
+      slot: 2,
+      type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
+    },
+  ],
+  stats: [
+    { base_stat: 60, effort: 0, stat: { name: "hp" } },
+    { base_stat: 62, effort: 0, stat: { name: "attack" } },
+    { base_stat: 63, effort: 0, stat: { name: "defense" } },
+    { base_stat: 80, effort: 1, stat: { name: "special-attack" } },
+    { base_stat: 80, effort: 0, stat: { name: "special-defense" } },
+    { base_stat: 60, effort: 0, stat: { name: "speed" } },
+  ],
+};
+
+export const mockTypeGrassResponse = {
+  pokemon: [
+    {
+      pokemon: {
+        name: "bulbasaur",
+        url: "https://pokeapi.co/api/v2/pokemon/1/",
+      },
+    },
+    {
+      pokemon: { name: "ivysaur", url: "https://pokeapi.co/api/v2/pokemon/2/" },
+    },
+  ],
+};
+
 export const mockPokemonMap: Record<string, any> = {
   "1": mockBulbasaur,
   bulbasaur: mockBulbasaur,
+  "2": mockIvysaur,
+  ivysaur: mockIvysaur,
   "4": mockCharmander,
   charmander: mockCharmander,
 };

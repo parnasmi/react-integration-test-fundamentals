@@ -1,5 +1,9 @@
 import { http, HttpResponse } from "msw";
-import { mockPokemonList, mockPokemonMap } from "./mock.data";
+import {
+  mockPokemonList,
+  mockPokemonMap,
+  mockTypeGrassResponse,
+} from "./mock.data";
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
@@ -19,5 +23,8 @@ export const handlers = [
     }
 
     return HttpResponse.json(pokemon);
+  }),
+  http.get(`${BASE_URL}/type/:type`, () => {
+    return HttpResponse.json(mockTypeGrassResponse);
   }),
 ];
