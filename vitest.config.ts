@@ -11,6 +11,6 @@ export default defineConfig({
     reporters: "verbose",
     watch: true,
     clearMocks: true,
-    // setupFiles: "./src/setupTests.ts",
+    setupFiles: "./vitest.setup.ts",
   },
 });
