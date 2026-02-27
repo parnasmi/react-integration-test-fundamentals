@@ -12,5 +12,6 @@ export default defineConfig({
     watch: true,
     clearMocks: true,
     setupFiles: "./vitest.setup.ts",
+    include: ["__tests__/integration/**/*.test.{ts,tsx}"],
   },
 });
